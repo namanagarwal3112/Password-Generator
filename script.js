@@ -7,15 +7,18 @@ const symbolsEl = document.getElementById("symbols");
 const generateEl = document.getElementById("generate");
 
 function getRandomLower() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+  const lowercase = "abcdefghijklmnopqrstuvwxyz";
+  return lowercase[Math.floor(Math.random() * lowercase.length)];
 }
 
 function getRandomUpper() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+  const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  return uppercase[Math.floor(Math.random() * uppercase.length)];
 }
 
 function getRandomNumber() {
-  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+  const numbers = "0123456789";
+  return numbers[Math.floor(Math.random() * numbers.length)];
 }
 
 function getRandomSymbol() {
@@ -48,9 +51,7 @@ function generatePassword(lower, upper, number, symbol, length) {
     });
   }
 
-  const finalPassword = generatedPassword.slice(0, length);
-
-  return finalPassword;
+  return generatedPassword;
 }
 
 generateEl.addEventListener("click", () => {
