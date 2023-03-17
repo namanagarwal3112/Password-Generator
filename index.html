@@ -8,29 +8,34 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body bgcolor="">
+<body>
     <div class="main-container">
         <h1>Password Generator</h1>
         <div class="result-container">
             <span id="result"></span>
         </div>
         <div class="radio">
+            <label for="">Password Length</label>
+            <input type="number" id="length" min="4" max="20" value="20">
+        </div>
+        <div class="radio">
             <label for="Upper Case">Upper Case</label>
-            <input type="checkbox">
+            <input type="checkbox" id="uppercase">
         </div>
         <div class="radio">
             <label for="Lower Case">Lower Case</label>
-            <input type="checkbox">
+            <input type="checkbox" id="lowercase">
         </div>
         <div class="radio">
             <label for="Numbers">Numbers</label>
-            <input type="checkbox">
+            <input type="checkbox" id="numbers">
         </div>
         <div class="radio">
             <label for="special-symbol">Special Symbol</label>
-            <input type="checkbox" name="" id="">
+            <input type="checkbox" name="" id="symbols">
         </div>
-        <button class="btn btn-info">Generate Password</button>
+        <button class="btn btn-info" id="generate">Generate Password</button>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
